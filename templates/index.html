@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title %}Home{% endblock %}
+{% block content %}
+<div class="text-center">
+    <h1 class="text-4xl font-bold mb-6">Welcome to the Face Recognition System</h1>
+    <p class="text-lg mb-8">This system allows you to capture faces, train a recognition model, and identify individuals in real-time using advanced computer vision techniques.</p>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <a href="{{ url_for('capture') }}" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 px-6 rounded-lg transition duration-300">
+            Capture Faces
+        </a>
+        <a href="{{ url_for('train') }}" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 px-6 rounded-lg transition duration-300">
+            Train Model
+        </a>
+        <a href="{{ url_for('recognize') }}" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 px-6 rounded-lg transition duration-300">
+            Recognize Faces
+        </a>
+    </div>
+</div>
+{% endblock %}
